@@ -1,12 +1,11 @@
 import os
 import numpy as np
 import streamlit as st
-from tensorflow.keras.preprocessing import image
 from joblib import load
 from PIL import Image
 
 # Carregar o modelo treinado
-classifier = load(r'c:\Users\Davi\Documents\classificacao_cancer\mobile\probest_work\streamlit\model.pkl')
+classifier = load('model.pkl')
 
 # Função para pré-processamento da imagem
 def process_image(imagem_pil, largura=600, altura=450):
